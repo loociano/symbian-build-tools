@@ -1,0 +1,1854 @@
+
+(object Petal
+    version    	37)
+
+(object Design "<Top Level>"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	FALSE
+	snapToGrid 	TRUE
+	gridX      	25
+	gridY      	25
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"helvetica"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Booch")
+    root_category 	(object Class_Category "<Top Level>"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"<Top Level>"
+	logical_models 	(list unit_reference_list
+	    (object Class "ArrayItem")
+	    (object Class "String"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			supplier   	"ArrayItem"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "iRep"
+			type       	"char*")
+		    (object ClassAttribute "iLength"
+			type       	"int")))
+	    (object Class "Array"
+		fields     	(list has_relationship_list
+		    (object Has_Relationship
+			label      	"iData"
+			supplier   	"ArrayItem"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "iItemCount"
+			type       	"int")))
+	    (object Class "ListItem"
+		fields     	(list has_relationship_list
+		    (object Has_Relationship
+			label      	"iNext"
+			supplier   	"ListItem")))
+	    (object Class "LinkedList"
+		fields     	(list has_relationship_list
+		    (object Has_Relationship
+			label      	"iHead"
+			supplier   	"ListItem")
+		    (object Has_Relationship
+			label      	"iTail"
+			supplier   	"ListItem")))
+	    (object Class "Stack"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			supplier   	"LinkedList")))
+	    (object Class "RSGStream"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "iOs"
+			type       	"ofstream")
+		    (object ClassAttribute "iCurrentId"
+			type       	"long")
+		    (object ClassAttribute "iNegative"
+			type       	"unsigned char")
+		    (object ClassAttribute "iCurrentFormat"
+			type       	"NumberFormat")
+		    (object ClassAttribute "iIdStartCol"
+			type       	"static short")))
+	    (object Class "ResourceItemArrayStack"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			supplier   	"Stack")))
+	    (object Class "StructResourceItemStack"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			supplier   	"Stack")))
+	    (object Class "yy_scan")
+	    (object Class "rcscan"
+		fields     	(list has_relationship_list
+		    (object Has_Relationship
+			label      	"iFileLineManager"
+			supplier   	"FileLineManager"))
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			supplier   	"yy_scan"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "iErrorFound"
+			type       	"unsigned char")))
+	    (object Class "ResourceOutputHeaderInfo"
+		fields     	(list has_relationship_list
+		    (object Has_Relationship
+			label      	"iIndexTableStart"
+			supplier   	"NumericValue")
+		    (object Has_Relationship
+			label      	"iIndexTableLength"
+			supplier   	"NumericValue")))
+	    (object Class "NumericValue"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "iSize"
+			type       	"unsigned long")
+		    (object ClassAttribute "iNumericValueType"
+			type       	"DataType")
+		    (object ClassAttribute "iData"
+			type       	"unsigned char*")
+		    (object ClassAttribute "iULongValue"
+			type       	"unsigned long")
+		    (object ClassAttribute "iSignedValue"
+			type       	"long")
+		    (object ClassAttribute "iDoubleValue"
+			type       	"double")))
+	    (object Class "FileLineManager"
+		fields     	(list has_relationship_list
+		    (object Has_Relationship
+			label      	"iCurrentFileName"
+			supplier   	"String")
+		    (object Has_Relationship
+			label      	"iBaseFileName"
+			supplier   	"String")
+		    (object Has_Relationship
+			label      	"iBasePath"
+			supplier   	"String"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "iOffsetLineNumber"
+			type       	"int")))
+	    (object Class "FileAccess")
+	    (object Class "MemCheckControl")
+	    (object Class "ErrorHandler"
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "iFileName"
+			type       	"static String")
+		    (object ClassAttribute "iLineNumber"
+			type       	"static int")))
+	    (object Class "ArrayIterator"
+		fields     	(list has_relationship_list
+		    (object Has_Relationship
+			label      	"iArray"
+			supplier   	"Array"))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "iCurrentIndex"
+			type       	"unsigned long")))
+	    (object Class "LinkedListIterator")
+	    (object Class "RCBinaryString")
+	    (object Class "StringArray"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			supplier   	"Array")))
+	    (object Class_Category "Arrays"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "Array" @1
+				location   	(1325, 950)
+				label      	(object ItemLabel
+				    Parent_View 	@1
+				    location   	(1207, 866)
+				    nlines     	2
+				    max_width  	277
+				    justify    	0
+				    label      	"Array")
+				compartment 	(object Compartment
+				    Parent_View 	@1
+				    location   	(1205, 932)
+				    anchor     	2
+				    nlines     	1
+				    max_width  	278
+				    justify    	0
+				    compartmentItems 	(list Compartment
+					"iItemCount : int"))
+				width      	402
+				autoResize 	TRUE)))))
+	    (object Class_Category "Stacks"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "StackItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ListItem"))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "Stack" @2
+				location   	(1475, 850)
+				label      	(object ItemLabel
+				    Parent_View 	@2
+				    location   	(1371, 766)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"Stack"))
+			    (object ClassView "Class" "ResourceItemArrayStack" @3
+				location   	(1325, 1225)
+				label      	(object ItemLabel
+				    Parent_View 	@3
+				    location   	(1203, 1141)
+				    nlines     	2
+				    max_width  	285
+				    justify    	0
+				    label      	"ResourceItemArrayStack")
+				width      	414)
+			    (object ClassView "Class" "StructResourceItemStack" @4
+				location   	(1850, 1200)
+				label      	(object ItemLabel
+				    Parent_View 	@4
+				    location   	(1723, 1116)
+				    nlines     	2
+				    max_width  	299
+				    justify    	0
+				    label      	"StructResourceItemStack")
+				width      	434
+				height     	254)
+			    (object InheritView "" @5
+				client     	@3
+				supplier   	@2
+				line_style 	0)
+			    (object InheritView "" @6
+				client     	@4
+				supplier   	@2
+				line_style 	0)
+			    (object ClassView "Class" "LinkedList" @7
+				location   	(1150, 475)
+				label      	(object ItemLabel
+				    Parent_View 	@7
+				    location   	(1046, 391)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"LinkedList")
+				annotation 	8)
+			    (object InheritView "" @8
+				client     	@2
+				supplier   	@7
+				line_style 	0)
+			    (object ClassView "Class" "StackItem" @9
+				location   	(2550, 1225)
+				label      	(object ItemLabel
+				    Parent_View 	@9
+				    location   	(2446, 1141)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"StackItem")
+				autoResize 	TRUE)
+			    (object ClassView "Class" "ListItem" @10
+				location   	(2575, 550)
+				label      	(object ItemLabel
+				    Parent_View 	@10
+				    location   	(2471, 466)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"ListItem"))
+			    (object InheritView "" @11
+				client     	@9
+				supplier   	@10
+				line_style 	0)))))
+	    (object Class_Category "IndexTables"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "IndexTableItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")))
+		    (object Class "IndexTable"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"Array")))
+		    (object Class "IndexTableIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator"))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "IndexTableItem" @12
+				location   	(1775, 1150)
+				label      	(object ItemLabel
+				    Parent_View 	@12
+				    location   	(1671, 1066)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"IndexTableItem"))
+			    (object ClassView "Class" "IndexTable" @13
+				location   	(975, 1150)
+				label      	(object ItemLabel
+				    Parent_View 	@13
+				    location   	(871, 1066)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"IndexTable"))
+			    (object ClassView "Class" "ArrayItem" @14
+				location   	(1775, 600)
+				label      	(object ItemLabel
+				    Parent_View 	@14
+				    location   	(1669, 516)
+				    nlines     	2
+				    max_width  	247
+				    justify    	0
+				    label      	"ArrayItem")
+				width      	358
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @15
+				client     	@12
+				supplier   	@14
+				line_style 	0)
+			    (object ClassView "Class" "Array" @16
+				location   	(975, 575)
+				label      	(object ItemLabel
+				    Parent_View 	@16
+				    location   	(832, 491)
+				    nlines     	2
+				    max_width  	336
+				    justify    	0
+				    label      	"Array")
+				compartment 	(object Compartment
+				    Parent_View 	@16
+				    location   	(832, 557)
+				    anchor     	2
+				    nlines     	2
+				    max_width  	334
+				    justify    	0
+				    compartmentItems 	(list Compartment
+					"||  iItemCount : int"))
+				width      	488
+				annotation 	8
+				autoResize 	TRUE)
+			    (object InheritView "" @17
+				client     	@13
+				supplier   	@16
+				line_style 	0)))))
+	    (object Class_Category "NameIds"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "NameIdMapIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator")))
+		    (object Class "NameIdItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")))
+		    (object Class "NameIdMap"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"Array"))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "NameIdItem" @18
+				location   	(925, 875)
+				label      	(object ItemLabel
+				    Parent_View 	@18
+				    location   	(821, 791)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"NameIdItem"))
+			    (object ClassView "Class" "NameIdMap" @19
+				location   	(1525, 850)
+				label      	(object ItemLabel
+				    Parent_View 	@19
+				    location   	(1421, 766)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"NameIdMap")
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Array" @20
+				location   	(1525, 400)
+				label      	(object ItemLabel
+				    Parent_View 	@20
+				    location   	(1419, 316)
+				    nlines     	2
+				    max_width  	247
+				    justify    	0
+				    label      	"Array")
+				width      	358
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "ArrayItem" @21
+				location   	(925, 425)
+				label      	(object ItemLabel
+				    Parent_View 	@21
+				    location   	(821, 341)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"ArrayItem")
+				annotation 	8)
+			    (object InheritView "" @22
+				client     	@19
+				supplier   	@20
+				line_style 	0)
+			    (object InheritView "" @23
+				client     	@18
+				supplier   	@21
+				line_style 	0)))))
+	    (object Class_Category "Links"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "LinkArrayIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator")))
+		    (object Class "LinkArray"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"Array")))
+		    (object Class "LinkItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")))
+		    (object Class "WordLink"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"LinkItem")))
+		    (object Class "LongLink"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"LinkItem"))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	166
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "Array" @24
+				location   	(1350, 525)
+				label      	(object ItemLabel
+				    Parent_View 	@24
+				    location   	(1244, 441)
+				    nlines     	2
+				    max_width  	247
+				    justify    	0
+				    label      	"Array")
+				width      	358
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "LinkArray" @25
+				location   	(1325, 1050)
+				label      	(object ItemLabel
+				    Parent_View 	@25
+				    location   	(1221, 966)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"LinkArray")
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "ArrayItem" @26
+				location   	(550, 600)
+				label      	(object ItemLabel
+				    Parent_View 	@26
+				    location   	(446, 516)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"ArrayItem")
+				annotation 	8)
+			    (object ClassView "Class" "LinkItem" @27
+				location   	(700, 1100)
+				label      	(object ItemLabel
+				    Parent_View 	@27
+				    location   	(596, 1016)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"LinkItem")
+				annotation 	8)
+			    (object ClassView "Class" "WordLink" @28
+				location   	(575, 1700)
+				label      	(object ItemLabel
+				    Parent_View 	@28
+				    location   	(471, 1616)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"WordLink")
+				annotation 	8)
+			    (object ClassView "Class" "LongLink" @29
+				location   	(1275, 1625)
+				label      	(object ItemLabel
+				    Parent_View 	@29
+				    location   	(1171, 1541)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"LongLink")
+				annotation 	8)
+			    (object InheritView "" @30
+				client     	@27
+				supplier   	@26
+				line_style 	0)
+			    (object InheritView "" @31
+				client     	@25
+				supplier   	@24
+				line_style 	0)
+			    (object InheritView "" @32
+				client     	@28
+				supplier   	@27
+				line_style 	0)
+			    (object InheritView "" @33
+				client     	@29
+				supplier   	@27
+				line_style 	0)))))
+	    (object Class_Category "Strings"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "StringArrayIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator"))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list))))
+	    (object Class_Category "RCTypes"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "RCTypeArray"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"Array")))
+		    (object Class "RCType"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")))
+		    (object Class "RCTypeArrayIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator"))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "Array" @34
+				location   	(1250, 800)
+				label      	(object ItemLabel
+				    Parent_View 	@34
+				    location   	(1144, 716)
+				    nlines     	2
+				    max_width  	247
+				    justify    	0
+				    label      	"Array")
+				width      	358
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "ArrayItem" @35
+				location   	(500, 825)
+				label      	(object ItemLabel
+				    Parent_View 	@35
+				    location   	(394, 741)
+				    nlines     	2
+				    max_width  	247
+				    justify    	0
+				    label      	"ArrayItem")
+				width      	358
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "RCTypeArray" @36
+				location   	(1325, 1300)
+				label      	(object ItemLabel
+				    Parent_View 	@36
+				    location   	(1221, 1216)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"RCTypeArray"))
+			    (object ClassView "Class" "RCType" @37
+				location   	(575, 1300)
+				label      	(object ItemLabel
+				    Parent_View 	@37
+				    location   	(471, 1216)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"RCType"))
+			    (object InheritView "" @38
+				client     	@37
+				supplier   	@35
+				line_style 	0)
+			    (object InheritView "" @39
+				client     	@36
+				supplier   	@34
+				line_style 	0)))))
+	    (object Class_Category "ResourceItems"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "ResourceItemArray"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")
+			    (object Inheritance_Relationship
+				supplier   	"Array")
+			    (object Inheritance_Relationship
+				supplier   	"StackItem"))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "iLenType"
+				type       	"DataType")))
+		    (object Class "ResourceItemArrayIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator")))
+		    (object Class "ResourceItemArrayArray"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"Array")))
+		    (object Class "ResourceItemArrayArrayIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator")))
+		    (object Class "ResourceHeader"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")))
+		    (object Class "ResourceItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"StackItem")
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")))
+		    (object Class "SimpleResourceItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ResourceItem")))
+		    (object Class "ArrayResourceItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ResourceItem")))
+		    (object Class "StructTypeResourceItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ResourceItem")))
+		    (object Class "StructArrayResourceItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ResourceItem"))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "ResourceItemArray" @40
+				location   	(1425, 850)
+				label      	(object ItemLabel
+				    Parent_View 	@40
+				    location   	(1248, 766)
+				    nlines     	2
+				    max_width  	418
+				    justify    	0
+				    label      	"ResourceItemArray")
+				compartment 	(object Compartment
+				    Parent_View 	@40
+				    location   	(1248, 832)
+				    anchor     	2
+				    nlines     	1
+				    max_width  	416
+				    justify    	0
+				    compartmentItems 	(list Compartment
+					"||  iLenType : DataType"))
+				width      	606
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "ArrayItem" @41
+				location   	(950, 1075)
+				label      	(object ItemLabel
+				    Parent_View 	@41
+				    location   	(844, 991)
+				    nlines     	2
+				    max_width  	247
+				    justify    	0
+				    label      	"ArrayItem")
+				width      	358
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "Array" @42
+				location   	(1675, 300)
+				label      	(object ItemLabel
+				    Parent_View 	@42
+				    location   	(1532, 216)
+				    nlines     	2
+				    max_width  	336
+				    justify    	0
+				    label      	"Array")
+				compartment 	(object Compartment
+				    Parent_View 	@42
+				    location   	(1532, 282)
+				    anchor     	2
+				    nlines     	2
+				    max_width  	334
+				    justify    	0
+				    compartmentItems 	(list Compartment
+					"||  iItemCount : int"))
+				width      	488
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "StackItem" @43
+				location   	(2225, 825)
+				label      	(object ItemLabel
+				    Parent_View 	@43
+				    location   	(2121, 741)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"StackItem"))
+			    (object InheritView "" @44
+				client     	@40
+				supplier   	@41
+				line_style 	0)
+			    (object InheritView "" @45
+				client     	@40
+				supplier   	@42
+				line_style 	0)
+			    (object InheritView "" @46
+				client     	@40
+				supplier   	@43
+				line_style 	0)
+			    (object ClassView "Class" "Array" @47
+				location   	(425, 1275)
+				label      	(object ItemLabel
+				    Parent_View 	@47
+				    location   	(321, 1191)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"Array")
+				autoResize 	TRUE)
+			    (object ClassView "Class" "ResourceItemArrayArray" @48
+				location   	(475, 1650)
+				label      	(object ItemLabel
+				    Parent_View 	@48
+				    location   	(353, 1566)
+				    nlines     	2
+				    max_width  	283
+				    justify    	0
+				    label      	"ResourceItemArrayArray")
+				width      	414
+				autoResize 	TRUE)
+			    (object InheritView "" @49
+				client     	@48
+				supplier   	@47
+				line_style 	0)
+			    (object ClassView "Class" "ResourceHeader" @50
+				location   	(1075, 1850)
+				label      	(object ItemLabel
+				    Parent_View 	@50
+				    location   	(971, 1766)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"ResourceHeader"))
+			    (object InheritView "" @51
+				client     	@50
+				supplier   	@41
+				line_style 	0)
+			    (object ClassView "Class" "ResourceItem" @52
+				location   	(2000, 1500)
+				label      	(object ItemLabel
+				    Parent_View 	@52
+				    location   	(1896, 1416)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"ResourceItem"))
+			    (object InheritView "" @53
+				client     	@52
+				supplier   	@43
+				line_style 	0)
+			    (object InheritView "" @54
+				client     	@52
+				supplier   	@41
+				line_style 	0)
+			    (object ClassView "Class" "SimpleResourceItem" @55
+				location   	(1575, 1725)
+				label      	(object ItemLabel
+				    Parent_View 	@55
+				    location   	(1463, 1641)
+				    nlines     	2
+				    max_width  	259
+				    justify    	0
+				    label      	"SimpleResourceItem")
+				width      	378
+				autoResize 	TRUE)
+			    (object InheritView "" @56
+				client     	@55
+				supplier   	@52
+				line_style 	0)
+			    (object ClassView "Class" "ArrayResourceItem" @57
+				location   	(2550, 1250)
+				label      	(object ItemLabel
+				    Parent_View 	@57
+				    location   	(2440, 1166)
+				    nlines     	2
+				    max_width  	254
+				    justify    	0
+				    label      	"ArrayResourceItem")
+				width      	372
+				autoResize 	TRUE)
+			    (object InheritView "" @58
+				client     	@57
+				supplier   	@52
+				line_style 	0)
+			    (object ClassView "Class" "StructTypeResourceItem" @59
+				location   	(2025, 1825)
+				label      	(object ItemLabel
+				    Parent_View 	@59
+				    location   	(1913, 1741)
+				    nlines     	2
+				    max_width  	259
+				    justify    	0
+				    label      	"StructTypeResourceItem")
+				width      	378
+				autoResize 	TRUE)
+			    (object InheritView "" @60
+				client     	@59
+				supplier   	@52
+				line_style 	0)
+			    (object ClassView "Class" "StructArrayResourceItem" @61
+				location   	(2475, 1675)
+				label      	(object ItemLabel
+				    Parent_View 	@61
+				    location   	(2362, 1591)
+				    nlines     	2
+				    max_width  	260
+				    justify    	0
+				    label      	"StructArrayResourceItem")
+				width      	380
+				autoResize 	TRUE)
+			    (object InheritView "" @62
+				client     	@61
+				supplier   	@52
+				line_style 	0)))))
+	    (object Class_Category "Structs"
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list
+		    (object Class "StructTypeStructItem"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"StructItem")))
+		    (object Class "StructItem"
+			fields     	(list has_relationship_list
+			    (object Has_Relationship
+				label      	"iLabel"
+				supplier   	"String"))
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")))
+		    (object Class "StructArrayStructItem"
+			fields     	(list has_relationship_list
+			    (object Has_Relationship
+				label      	"iSize"
+				supplier   	"String"))
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"StructItem"))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "iLenType"
+				type       	"DataType")))
+		    (object Class "SimpleStructItem"
+			fields     	(list has_relationship_list
+			    (object Has_Relationship
+				label      	"iDefault"
+				supplier   	"String")
+			    (object Has_Relationship
+				label      	"iLengthLimit"
+				supplier   	"String"))
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"StructItem"))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "iItemType"
+				type       	"DataType")))
+		    (object Class "ArrayStructItem"
+			fields     	(list has_relationship_list
+			    (object Has_Relationship
+				label      	"iDefaults"
+				supplier   	"StringArray")
+			    (object Has_Relationship
+				label      	"iSize"
+				supplier   	"String"))
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"StructItem"))
+			class_attributes 	(list class_attribute_list
+			    (object ClassAttribute "iItemType"
+				type       	"DataType")
+			    (object ClassAttribute "iLenType"
+				type       	"DataType")))
+		    (object Class "StructItemArray"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"Array")))
+		    (object Class "StructItemArrayIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator")))
+		    (object Class "StructHeader"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayItem")))
+		    (object Class "StructHeaderArray"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"Array")))
+		    (object Class "StructHeaderArrayIterator"
+			superclasses 	(list inheritance_relationship_list
+			    (object Inheritance_Relationship
+				supplier   	"ArrayIterator"))))
+		logical_presentations 	(list unit_reference_list
+		    (object ClassDiagram "Main"
+			title      	"Main"
+			zoom       	100
+			max_height 	28350
+			max_width  	21600
+			origin_x   	0
+			origin_y   	0
+			items      	(list diagram_item_list
+			    (object ClassView "Class" "StructArrayStructItem" @63
+				location   	(875, 350)
+				label      	(object ItemLabel
+				    Parent_View 	@63
+				    location   	(698, 266)
+				    nlines     	2
+				    max_width  	418
+				    justify    	0
+				    label      	"StructArrayStructItem")
+				compartment 	(object Compartment
+				    Parent_View 	@63
+				    location   	(698, 332)
+				    anchor     	2
+				    nlines     	1
+				    max_width  	416
+				    justify    	0
+				    compartmentItems 	(list Compartment
+					"||  iLenType : DataType"))
+				width      	606
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "String" @64
+				location   	(1075, 975)
+				label      	(object ItemLabel
+				    Parent_View 	@64
+				    location   	(932, 871)
+				    nlines     	2
+				    max_width  	336
+				    justify    	0
+				    label      	"String")
+				compartment 	(object Compartment
+				    Parent_View 	@64
+				    location   	(932, 937)
+				    anchor     	2
+				    nlines     	3
+				    max_width  	334
+				    justify    	0
+				    compartmentItems 	(list Compartment
+					"||  iRep : char*"
+					"||  iLength : int"))
+				width      	488
+				height     	310
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "ArrayItem" @65
+				location   	(1425, 350)
+				label      	(object ItemLabel
+				    Parent_View 	@65
+				    location   	(1319, 266)
+				    nlines     	2
+				    max_width  	247
+				    justify    	0
+				    label      	"ArrayItem")
+				width      	358
+				annotation 	8
+				autoResize 	TRUE)
+			    (object ClassView "Class" "StructItem" @66
+				location   	(1800, 1175)
+				label      	(object ItemLabel
+				    Parent_View 	@66
+				    location   	(1696, 1091)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"StructItem"))
+			    (object ClassView "Class" "StructTypeStructItem" @67
+				location   	(2200, 875)
+				label      	(object ItemLabel
+				    Parent_View 	@67
+				    location   	(2096, 791)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"StructTypeStructItem"))
+			    (object ClassView "Class" "StringArray" @68
+				location   	(2425, 1650)
+				label      	(object ItemLabel
+				    Parent_View 	@68
+				    location   	(2321, 1566)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"StringArray"))
+			    (object ClassView "Class" "ArrayStructItem" @69
+				location   	(1900, 1775)
+				label      	(object ItemLabel
+				    Parent_View 	@69
+				    location   	(1735, 1691)
+				    nlines     	2
+				    max_width  	390
+				    justify    	0
+				    label      	"ArrayStructItem")
+				compartment 	(object Compartment
+				    Parent_View 	@69
+				    location   	(1735, 1757)
+				    anchor     	2
+				    nlines     	2
+				    max_width  	388
+				    justify    	0
+				    compartmentItems 	(list Compartment
+					"iItemType : DataType"
+					"iLenType : DataType"))
+				width      	566
+				height     	254)
+			    (object ClassView "Class" "SimpleStructItem" @70
+				location   	(1350, 1575)
+				label      	(object ItemLabel
+				    Parent_View 	@70
+				    location   	(1169, 1491)
+				    nlines     	2
+				    max_width  	430
+				    justify    	0
+				    label      	"SimpleStructItem")
+				compartment 	(object Compartment
+				    Parent_View 	@70
+				    location   	(1169, 1557)
+				    anchor     	2
+				    nlines     	1
+				    max_width  	428
+				    justify    	0
+				    compartmentItems 	(list Compartment
+					"||  iItemType : DataType"))
+				width      	624
+				annotation 	8
+				autoResize 	TRUE)
+			    (object HasView "iSize" @71
+				label      	(object ItemLabel
+				    Parent_View 	@71
+				    location   	(978, 646)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"iSize")
+				client     	@63
+				supplier   	@64
+				line_style 	0)
+			    (object InheritView "" @72
+				client     	@64
+				supplier   	@65
+				line_style 	0)
+			    (object InheritView "" @73
+				client     	@63
+				supplier   	@66
+				line_style 	0)
+			    (object HasView "iLabel" @74
+				label      	(object ItemLabel
+				    Parent_View 	@74
+				    location   	(1470, 1080)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"iLabel")
+				client     	@66
+				supplier   	@64
+				line_style 	0)
+			    (object InheritView "" @75
+				client     	@66
+				supplier   	@65
+				line_style 	0)
+			    (object InheritView "" @76
+				client     	@67
+				supplier   	@66
+				line_style 	0)
+			    (object InheritView "" @77
+				client     	@69
+				supplier   	@66
+				line_style 	0)
+			    (object HasView "iDefaults" @78
+				label      	(object ItemLabel
+				    Parent_View 	@78
+				    location   	(2235, 1707)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"iDefaults")
+				client     	@69
+				supplier   	@68
+				line_style 	0)
+			    (object HasView "iSize" @79
+				label      	(object ItemLabel
+				    Parent_View 	@79
+				    location   	(881, 1699)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"iSize")
+				client     	@69
+				supplier   	@64
+				vertices   	(list Points
+				    (1638, 1784)
+				    (1213, 1818)
+				    (863, 1693)
+				    (738, 1218)
+				    (951, 1051))
+				line_style 	0)
+			    (object HasView "iDefault" @80
+				label      	(object ItemLabel
+				    Parent_View 	@80
+				    location   	(906, 1356)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"iDefault")
+				client     	@70
+				supplier   	@64
+				vertices   	(list Points
+				    (1116, 1510)
+				    (888, 1343)
+				    (989, 1126))
+				line_style 	0)
+			    (object HasView "iLengthLimit" @81
+				label      	(object ItemLabel
+				    Parent_View 	@81
+				    location   	(1197, 1275)
+				    anchor_loc 	1
+				    nlines     	1
+				    max_width  	450
+				    justify    	0
+				    label      	"iLengthLimit")
+				client     	@70
+				supplier   	@64
+				line_style 	0)
+			    (object InheritView "" @82
+				client     	@70
+				supplier   	@66
+				line_style 	0)
+			    (object ClassView "Class" "StructItemArray" @83
+				location   	(2625, 1175)
+				label      	(object ItemLabel
+				    Parent_View 	@83
+				    location   	(2521, 1091)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"StructItemArray"))
+			    (object ClassView "Class" "Array" @84
+				location   	(2700, 650)
+				label      	(object ItemLabel
+				    Parent_View 	@84
+				    location   	(2596, 566)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"Array"))
+			    (object InheritView "" @85
+				client     	@83
+				supplier   	@84
+				line_style 	0)
+			    (object ClassView "Class" "StructHeader" @86
+				location   	(1975, 425)
+				label      	(object ItemLabel
+				    Parent_View 	@86
+				    location   	(1871, 341)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"StructHeader"))
+			    (object InheritView "" @87
+				client     	@86
+				supplier   	@65
+				line_style 	0)
+			    (object ClassView "Class" "StructHeaderArray" @88
+				location   	(2625, 225)
+				label      	(object ItemLabel
+				    Parent_View 	@88
+				    location   	(2521, 141)
+				    nlines     	2
+				    max_width  	240
+				    justify    	0
+				    label      	"StructHeaderArray"))
+			    (object InheritView "" @89
+				client     	@88
+				supplier   	@84
+				line_style 	0))))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "ArrayItem" @90
+			location   	(925, 450)
+			label      	(object ItemLabel
+			    Parent_View 	@90
+			    location   	(821, 366)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"ArrayItem")
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "String" @91
+			location   	(725, 900)
+			label      	(object ItemLabel
+			    Parent_View 	@91
+			    location   	(614, 816)
+			    nlines     	2
+			    max_width  	259
+			    justify    	0
+			    label      	"String")
+			compartment 	(object Compartment
+			    Parent_View 	@91
+			    location   	(614, 882)
+			    anchor     	2
+			    nlines     	2
+			    max_width  	256
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"||  iRep : char*"
+				"||  iLength : int"))
+			width      	376
+			height     	254
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Array" @92
+			location   	(1650, 600)
+			label      	(object ItemLabel
+			    Parent_View 	@92
+			    location   	(1514, 516)
+			    nlines     	2
+			    max_width  	321
+			    justify    	0
+			    label      	"Array")
+			compartment 	(object Compartment
+			    Parent_View 	@92
+			    location   	(1514, 582)
+			    anchor     	2
+			    nlines     	1
+			    max_width  	319
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"||  iItemCount : int"))
+			width      	466
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "ListItem" @93
+			location   	(2775, 425)
+			label      	(object ItemLabel
+			    Parent_View 	@93
+			    location   	(2671, 341)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"ListItem")
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "LinkedList" @94
+			location   	(2350, 725)
+			label      	(object ItemLabel
+			    Parent_View 	@94
+			    location   	(2246, 641)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"LinkedList")
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @95
+			client     	@91
+			supplier   	@90
+			line_style 	0)
+		    (object HasView "iData" @96
+			label      	(object ItemLabel
+			    Parent_View 	@96
+			    location   	(1258, 524)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iData")
+			client     	@92
+			supplier   	@90
+			line_style 	0)
+		    (object HasView "iNext" @97
+			label      	(object ItemLabel
+			    Parent_View 	@97
+			    location   	(2980, 652)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iNext")
+			client     	@93
+			supplier   	@93
+			vertices   	(list Points
+			    (2924, 426)
+			    (3001, 427)
+			    (3001, 652)
+			    (2776, 652)
+			    (2775, 534))
+			line_style 	0)
+		    (object HasView "iHead" @98
+			label      	(object ItemLabel
+			    Parent_View 	@98
+			    location   	(2488, 476)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iHead")
+			client     	@94
+			supplier   	@93
+			vertices   	(list Points
+			    (2416, 604)
+			    (2501, 452)
+			    (2620, 439))
+			line_style 	0)
+		    (object HasView "iTail" @99
+			label      	(object ItemLabel
+			    Parent_View 	@99
+			    location   	(2619, 606)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iTail")
+			client     	@94
+			supplier   	@93
+			vertices   	(list Points
+			    (2522, 658)
+			    (2601, 627)
+			    (2693, 520))
+			line_style 	0)
+		    (object CategoryView "Stacks" @100
+			location   	(2250, 1675)
+			label      	(object ItemLabel
+			    Parent_View 	@100
+			    location   	(2106, 1591)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Stacks")
+			width      	300
+			height     	180)
+		    (object CategoryView "IndexTables" @101
+			location   	(2600, 1675)
+			label      	(object ItemLabel
+			    Parent_View 	@101
+			    location   	(2456, 1591)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"IndexTables")
+			width      	300
+			height     	180)
+		    (object CategoryView "NameIds" @102
+			location   	(1900, 1700)
+			label      	(object ItemLabel
+			    Parent_View 	@102
+			    location   	(1756, 1616)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"NameIds")
+			width      	300
+			height     	180)
+		    (object CategoryView "Links" @103
+			location   	(1875, 1950)
+			label      	(object ItemLabel
+			    Parent_View 	@103
+			    location   	(1731, 1866)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Links")
+			width      	300
+			height     	180)
+		    (object CategoryView "RCTypes" @104
+			location   	(2950, 1900)
+			label      	(object ItemLabel
+			    Parent_View 	@104
+			    location   	(2806, 1816)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"RCTypes")
+			width      	300
+			height     	180)
+		    (object CategoryView "ResourceItems" @105
+			location   	(2600, 1925)
+			label      	(object ItemLabel
+			    Parent_View 	@105
+			    location   	(2456, 1841)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"ResourceItems")
+			width      	300
+			height     	180)
+		    (object CategoryView "Structs" @106
+			location   	(2250, 1925)
+			label      	(object ItemLabel
+			    Parent_View 	@106
+			    location   	(2106, 1841)
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"Structs")
+			width      	300
+			height     	180)
+		    (object ClassView "Class" "StringArray" @107
+			location   	(1300, 1775)
+			label      	(object ItemLabel
+			    Parent_View 	@107
+			    location   	(1196, 1691)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"StringArray")
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Array" @108
+			location   	(1300, 1275)
+			label      	(object ItemLabel
+			    Parent_View 	@108
+			    location   	(1164, 1191)
+			    nlines     	2
+			    max_width  	321
+			    justify    	0
+			    label      	"Array")
+			compartment 	(object Compartment
+			    Parent_View 	@108
+			    location   	(1164, 1257)
+			    anchor     	2
+			    nlines     	1
+			    max_width  	319
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"||  iItemCount : int"))
+			width      	466
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @109
+			client     	@107
+			supplier   	@108
+			line_style 	0)))
+	    (object ClassDiagram "Control classes"
+		title      	"Control classes"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	249
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "yy_scan" @110
+			location   	(975, 400)
+			label      	(object ItemLabel
+			    Parent_View 	@110
+			    location   	(871, 316)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"yy_scan"))
+		    (object ClassView "Class" "rcscan" @111
+			location   	(975, 900)
+			label      	(object ItemLabel
+			    Parent_View 	@111
+			    location   	(764, 816)
+			    nlines     	2
+			    max_width  	502
+			    justify    	0
+			    label      	"rcscan")
+			compartment 	(object Compartment
+			    Parent_View 	@111
+			    location   	(764, 882)
+			    anchor     	2
+			    nlines     	1
+			    max_width  	500
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"iErrorFound : unsigned char"))
+			width      	728
+			height     	254
+			autoResize 	TRUE)
+		    (object InheritView "" @112
+			client     	@111
+			supplier   	@110
+			line_style 	0)
+		    (object ClassView "Class" "ResourceOutputHeaderInfo" @113
+			location   	(1950, 650)
+			label      	(object ItemLabel
+			    Parent_View 	@113
+			    location   	(1804, 530)
+			    nlines     	2
+			    max_width  	344
+			    justify    	0
+			    label      	"ResourceOutputHeaderInfo")
+			width      	500
+			height     	356)
+		    (object ClassView "Class" "NumericValue" @114
+			location   	(2025, 1325)
+			label      	(object ItemLabel
+			    Parent_View 	@114
+			    location   	(1790, 1158)
+			    nlines     	2
+			    max_width  	561
+			    justify    	0
+			    label      	"NumericValue")
+			compartment 	(object Compartment
+			    Parent_View 	@114
+			    location   	(1790, 1224)
+			    anchor     	2
+			    nlines     	6
+			    max_width  	559
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"iSize : unsigned long"
+				"iNumericValueType : DataType"
+				"iData : unsigned char*"
+				"iULongValue : unsigned long"
+				"iSignedValue : long"
+				"iDoubleValue : double"))
+			width      	814
+			height     	490
+			autoResize 	TRUE)
+		    (object HasView "iIndexTableStart" @115
+			label      	(object ItemLabel
+			    Parent_View 	@115
+			    location   	(1832, 969)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iIndexTableStart")
+			client     	@113
+			supplier   	@114
+			vertices   	(list Points
+			    (1875, 827)
+			    (1825, 950)
+			    (1886, 1111))
+			line_style 	0)
+		    (object HasView "iIndexTableLength" @116
+			label      	(object ItemLabel
+			    Parent_View 	@116
+			    location   	(2210, 909)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iIndexTableLength")
+			client     	@113
+			supplier   	@114
+			vertices   	(list Points
+			    (2059, 757)
+			    (2250, 950)
+			    (2188, 1095))
+			line_style 	0)
+		    (object ClassView "Class" "FileLineManager" @117
+			location   	(975, 1475)
+			label      	(object ItemLabel
+			    Parent_View 	@117
+			    location   	(800, 1391)
+			    nlines     	2
+			    max_width  	415
+			    justify    	0
+			    label      	"FileLineManager")
+			compartment 	(object Compartment
+			    Parent_View 	@117
+			    location   	(800, 1457)
+			    anchor     	2
+			    nlines     	1
+			    max_width  	413
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"iOffsetLineNumber : int"))
+			width      	602
+			autoResize 	TRUE)
+		    (object HasView "iFileLineManager" @118
+			label      	(object ItemLabel
+			    Parent_View 	@118
+			    location   	(975, 1192)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iFileLineManager")
+			client     	@111
+			supplier   	@117
+			line_style 	0)
+		    (object ClassView "Class" "String" @119
+			location   	(1450, 1800)
+			label      	(object ItemLabel
+			    Parent_View 	@119
+			    location   	(1346, 1716)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"String")
+			compartment 	(object Compartment
+			    Parent_View 	@119
+			    location   	(1359, 1782)
+			    anchor     	2
+			    nlines     	2
+			    max_width  	215
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"iRep : char*"
+				"iLength : int"))
+			autoResize 	TRUE)
+		    (object HasView "iCurrentFileName" @120
+			label      	(object ItemLabel
+			    Parent_View 	@120
+			    location   	(1254, 1637)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iCurrentFileName")
+			client     	@117
+			supplier   	@119
+			line_style 	0)
+		    (object ClassView "Class" "String" @121
+			location   	(925, 1900)
+			label      	(object ItemLabel
+			    Parent_View 	@121
+			    location   	(821, 1816)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"String")
+			compartment 	(object Compartment
+			    Parent_View 	@121
+			    location   	(832, 1882)
+			    anchor     	2
+			    nlines     	2
+			    max_width  	216
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"iRep : char*"
+				"iLength : int"))
+			autoResize 	TRUE)
+		    (object HasView "iBaseFileName" @122
+			label      	(object ItemLabel
+			    Parent_View 	@122
+			    location   	(945, 1694)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iBaseFileName")
+			client     	@117
+			supplier   	@121
+			line_style 	0)
+		    (object ClassView "Class" "String" @123
+			location   	(500, 1725)
+			label      	(object ItemLabel
+			    Parent_View 	@123
+			    location   	(396, 1641)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"String")
+			compartment 	(object Compartment
+			    Parent_View 	@123
+			    location   	(407, 1707)
+			    anchor     	2
+			    nlines     	2
+			    max_width  	216
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"iRep : char*"
+				"iLength : int"))
+			autoResize 	TRUE)
+		    (object HasView "iBasePath" @124
+			label      	(object ItemLabel
+			    Parent_View 	@124
+			    location   	(736, 1583)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"iBasePath")
+			client     	@117
+			supplier   	@123
+			line_style 	0)
+		    (object ClassView "Class" "FileAccess" @125
+			location   	(525, 1100)
+			label      	(object ItemLabel
+			    Parent_View 	@125
+			    location   	(421, 1016)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"FileAccess"))
+		    (object ClassView "Class" "MemCheckControl" @126
+			location   	(250, 775)
+			label      	(object ItemLabel
+			    Parent_View 	@126
+			    location   	(146, 691)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"MemCheckControl"))
+		    (object ClassView "Class" "RSGStream" @127
+			location   	(1975, 2050)
+			label      	(object ItemLabel
+			    Parent_View 	@127
+			    location   	(1758, 1869)
+			    nlines     	2
+			    max_width  	517
+			    justify    	0
+			    label      	"RSGStream")
+			compartment 	(object Compartment
+			    Parent_View 	@127
+			    location   	(1656, 1935)
+			    anchor     	2
+			    nlines     	5
+			    max_width  	719
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"iOs : ofstream"
+				"iCurrentId : long"
+				"iNegative : unsigned char"
+				"iCurrentFormat : NumberFormat"
+				"iIdStartCol : static short"))
+			width      	750
+			height     	531)
+		    (object ClassView "Class" "ErrorHandler" @128
+			location   	(2700, 1650)
+			label      	(object ItemLabel
+			    Parent_View 	@128
+			    location   	(2514, 1566)
+			    nlines     	2
+			    max_width  	440
+			    justify    	0
+			    label      	"ErrorHandler")
+			compartment 	(object Compartment
+			    Parent_View 	@128
+			    location   	(2514, 1632)
+			    anchor     	2
+			    nlines     	2
+			    max_width  	438
+			    justify    	0
+			    compartmentItems 	(list Compartment
+				"iFileName : static String"
+				"iLineNumber : static int"))
+			width      	638
+			autoResize 	TRUE)
+		    (object ClassView "Class" "RCBinaryString" @129
+			location   	(2625, 600)
+			label      	(object ItemLabel
+			    Parent_View 	@129
+			    location   	(2521, 516)
+			    nlines     	2
+			    max_width  	240
+			    justify    	0
+			    label      	"RCBinaryString"))))))
+    root_subsystem 	(object SubSystem "<Top Level>"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	ProcsNDevs 	(list
+	    (object Process_Diagram ""
+		title      	""
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties))

@@ -1,0 +1,10 @@
+// BLD.INF
+//
+// Copyright (c) 1999 Symbian Ltd.  All rights reserved.
+//
+
+PRJ_PLATFORMS
+TOOLS
+
+PRJ_MMPFILES
+..\src\rcomp.mmp

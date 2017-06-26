@@ -1,0 +1,19 @@
+// BMCONV.MMP
+//
+// Copyright (c) 1997-2001 Symbian Ltd.  All rights reserved.
+//
+
+TARGET           bmconv.exe
+
+TARGETTYPE       exe
+
+
+SOURCEPATH       ..\bmconv
+SOURCE           mainfunc.cpp 
+SOURCE           bmtopbm.cpp pbmcomp.cpp pbmtobm.cpp
+SOURCE           rgb.cpp utils.cpp
+
+USERINCLUDE      ..\inc
+SYSTEMINCLUDE    ..\inc
+SYSTEMINCLUDE    \epoc32\include
+

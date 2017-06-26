@@ -1,0 +1,5 @@
+TARGET			uidcrc.exe
+TARGETTYPE		exe
+SOURCEPATH	..\e32uid
+SOURCE			uidcrc.cpp e32uid.cpp
+SYSTEMINCLUDE	\epoc32\include

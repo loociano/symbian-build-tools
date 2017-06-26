@@ -1,0 +1,31 @@
+// BLD.INF
+//
+// Copyright (c) 1999-2001 Symbian Ltd.  All rights reserved.
+//
+
+PRJ_PLATFORMS
+TOOLS
+
+PRJ_EXPORTS
+
+//..\dspec\romimage.rtf		\epoc32\engdoc\e32tools\romimage.rtf
+//..\rombuild\checkstubs.pl	\epoc32\rom\tools\checkstubs.pl
+//..\rombuild\addextension.pl	\epoc32\rom\tools\addextension.pl
+
+PRJ_MMPFILES
+
+//ERUNTEST
+//ETOUCH
+//PEDIFF
+PETRAN
+//READTYPE
+//..\ROMBUILD\ROMBUILD.MMP
+//ROMMASK
+//W32REPRO
+//WVECONV
+UIDCRC
+//BIN2COFF
+
+PRJ_TESTMMPFILES
+
+//..\rombuild\r_t_areaset

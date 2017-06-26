@@ -1,0 +1,13 @@
+TARGET			petran.exe
+TARGETTYPE		exe
+SOURCEPATH	..\petran
+SOURCE			 petran.cpp
+SOURCEPATH	..\e32uid
+SOURCE			 e32uid.cpp
+SOURCEPATH	..\host
+SOURCE			 h_file.cpp h_mem.cpp h_utl.cpp
+SOURCEPATH	..\pefile
+SOURCE			pe_dump.cpp pe_file.cpp pe_img.cpp
+SOURCE			 pe_imp.cpp pe_io.cpp pe_reloc.cpp pe_tran.cpp
+SOURCE			 pe_utl.cpp
+SYSTEMINCLUDE	..\inc \epoc32\include

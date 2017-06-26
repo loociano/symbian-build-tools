@@ -1,0 +1,11 @@
+// BLD.INF
+//
+// Copyright (c) 1999-2000 Symbian Ltd.  All rights reserved.
+//
+
+PRJ_PLATFORMS
+TOOLS WINC
+
+PRJ_MMPFILES
+
+..\group\bmconv.mmp
